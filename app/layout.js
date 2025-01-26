@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        cz-shortcut-listen="true"
+        cz-shortcut-listen="true"  // this line add for initial hydration issue
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
