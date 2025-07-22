@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="p-6">
       <body
-        cz-shortcut-listen="true"  // this line add for initial hydration issue
+        cz-shortcut-listen="true" // this line add for initial hydration issue
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <nav>
@@ -31,6 +31,9 @@ export default function RootLayout({ children }) {
             </li>
             <li>
               <Link href="/about">About</Link>
+            </li>
+            <li>
+              <Link href="/blogs">Blogs</Link>
             </li>
           </ul>
         </nav>
