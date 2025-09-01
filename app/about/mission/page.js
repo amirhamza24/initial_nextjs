@@ -1,8 +1,8 @@
 // "use client";
 
 import Button from "@/app/components/Button";
-// import Image from "next/image";
-// import thumb from "@/public/images/first.jpg";
+import Image from "next/image";
+import thumb from "@/public/images/first.jpg";
 
 export default function Mission() {
   return (
@@ -15,11 +15,11 @@ export default function Mission() {
         lorem diam et voluptua eos et takimata.
       </div>
 
-      {/* <div className="w-[400px] ">
-        <Image src={thumb} alt="Thumb Image" />
-      </div> */}
+      <div className="w-[400px] ">
+        <Image placeholder="blur" src={thumb} alt="Thumb Image" />
+      </div>
 
-      {/* <Button /> */}
+      <Button />
     </main>
   );
 }

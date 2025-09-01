@@ -25,7 +25,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${poppins.variable}`}>
+    <html lang="en" className="p-6">
       <body
         cz-shortcut-listen="true" // this line add for initial hydration issue
         className={`${poppins.variable} ${poppins.variable} ${poppins.variable} antialiased`}
