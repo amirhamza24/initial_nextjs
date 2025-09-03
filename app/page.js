@@ -4,7 +4,7 @@ import { Login } from "@/lib/login";
 import Image from "next/image";
 
 export default function Home() {
-  // login sales fusion api test
+  // sales-fusion login api test
   // const [userId, setUserId] = useState("");
   // const [password, setPassword] = useState("");
   // const [loading, setLoading] = useState(false);
@@ -50,7 +50,7 @@ export default function Home() {
         essentially unchanged.
       </div>
 
-      {/* login sales fusion api test */}
+      {/* sales-fusion login api test */}
       {/* <div className="flex justify-center items-center">
         <form
           onSubmit={handleLogin}
