@@ -27,7 +27,8 @@ export default function RootLayout({ children }) {
     <html lang="en" className="p-6">
       <body
         cz-shortcut-listen="true" // this line add for initial hydration issue
-        className={`${poppins.className} antialiased`}
+        // className={`${poppins.className} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <nav>
           <ul className="flex gap-6">
