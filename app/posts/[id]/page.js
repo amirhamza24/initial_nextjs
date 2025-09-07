@@ -1,6 +1,7 @@
+import Comments from "@/app/components/Comments";
 import getPost from "@/lib/getPost";
 import getPostComments from "@/lib/getPostComment";
-import React from "react";
+import React, { Suspense } from "react";
 
 export async function generateMetadata({ params }) {
   const { id } = params;
@@ -18,9 +19,11 @@ export default async function PostPage({ params }) {
   const postPromise = getPost(id);
   const commentsPromise = getPostComments(id);
 
-  const [post, comments] = await Promise.all([postPromise, commentsPromise]);
+  // const [post, comments] = await Promise.all([postPromise, commentsPromise]);
 
-  console.log(comments);
+  // console.log(comments);
+
+  const post = await postPromise;
 
   return (
     <div className="mt-6">
@@ -29,7 +32,7 @@ export default async function PostPage({ params }) {
 
       <hr />
 
-      <div className="mt-6">
+      {/* <div className="mt-6">
         <h1>Comments</h1>
 
         <ul>
@@ -39,7 +42,11 @@ export default async function PostPage({ params }) {
             </li>
           ))}
         </ul>
-      </div>
+      </div> */}
+
+      <Suspense fallback="<h1>Loading Comments...</h1>">
+        <Comments promise={commentsPromise} />
+      </Suspense>
     </div>
   );
 }
