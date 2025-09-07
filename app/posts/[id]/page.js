@@ -31,6 +31,14 @@ export default async function PostPage({ params }) {
 
       <div className="mt-6">
         <h1>Comments</h1>
+
+        <ul>
+          {comments.map((comment) => (
+            <li className="mb-2" key={comment.id}>
+              {comment.body}
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   );
